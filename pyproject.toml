@@ -1,0 +1,18 @@
+[project]
+name = "e2eproject"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "gradio>=4.0",
+    "openai>=1.68.2",
+    "pypdf>=6.6.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.5",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
