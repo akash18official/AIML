@@ -14,16 +14,16 @@ The project structure is organized as follows:
 
 Clearing some of the common doubts:
 
-FastAPI
-# Akash - added on 27-01-2026
+#FastAPI
+Akash - added on 27-01-2026
 
 FastAPI is a Python framework for building APIs and web servers.
 It allows you to handle HTTP requests, return JSON responses, and automatically generate API documentation.
 
 Important: FastAPI itself is just a Python object. Creating an instance does not start a server or listen on any port.
 
-Important: Why Uvicorn is Required
-# Akash- added on 30-01-2026
+#Important: Why Uvicorn is Required
+Akash- added on 30-01-2026
 
 Uvicorn is an ASGI server that runs the FastAPI app and listens for incoming HTTP requests.
 When you create a FastAPI app object, nothing is exposed on a port.
@@ -37,8 +37,8 @@ Uvicorn = Makes the FastAPI app accessible over HTTP
 This combination allows your app to serve requests reliably in development and production environments.
 
 
-# Akash- added on 31-01-2026
-Main commands used for uv:
+Akash- added on 31-01-2026
+#Main commands used for uv:
 
 uv init - creates dependency file, and creates a virtual environment
 uv sync - After adding a new dependency to the file, run uv sync to install it
