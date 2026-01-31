@@ -15,7 +15,7 @@ The project structure is organized as follows:
 
 Clearing some of the common doubts:
 
-#FastAPI
+# FastAPI
 Akash - added on 27-01-2026
 
 FastAPI is a Python framework for building APIs and web servers.
@@ -23,7 +23,7 @@ It allows you to handle HTTP requests, return JSON responses, and automatically 
 
 Important: FastAPI itself is just a Python object. Creating an instance does not start a server or listen on any port.
 
-#Important: Why Uvicorn is Required?
+# Important: Why Uvicorn is Required?
 Akash- added on 30-01-2026
 
 Uvicorn is an ASGI server that runs the FastAPI app and listens for incoming HTTP requests.
@@ -39,7 +39,7 @@ This combination allows your app to serve requests reliably in development and p
 
 
 Akash- added on 31-01-2026
-#Main commands used for uv:
+# Main commands used for uv:
 
 uv init - creates dependency file, and creates a virtual environment
 uv sync - After adding a new dependency to the file, run uv sync to install it
@@ -51,7 +51,6 @@ RUN pip install --no-cache-dir uv -- installs uv
 COPY pyproject.toml uv.lock ./ -- copy dependency file to working directory in container
 
 RUN uv sync --no-cache -- uv sync helps to install exact dependencies.
-
 
 imp : ensure to give port mapping when running docker images on container.
 
