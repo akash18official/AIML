@@ -38,8 +38,9 @@ Uvicorn = Makes the FastAPI app accessible over HTTP
 This combination allows your app to serve requests reliably in development and production environments.
 
 
-Akash- added on 31-01-2026
+
 # Main commands used for uv:
+Akash- added on 31-01-2026
 
 uv init - creates dependency file, and creates a virtual environment
 uv sync - After adding a new dependency to the file, run uv sync to install it
