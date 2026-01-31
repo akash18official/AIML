@@ -1,10 +1,11 @@
 # Project Overview
 
-This project is a skeleton code for creating a simple Python application using:
+This project has a skeleton code for creating a simple Python application and is super important in the field of AI ML.It's a skeleton code and has only the basic and necessary components required for buliding an app. If you are someone trying to build your first python app and deploy it in a production environemt as a docker file, This is for you. I used:
 
 1) UV – Environment and package manager
 2) Uvicorn – ASGI web server for running FastAPI apps
 3) Docker – For building images and running containers
+
 
 The project structure is organized as follows:
 
@@ -22,7 +23,7 @@ It allows you to handle HTTP requests, return JSON responses, and automatically 
 
 Important: FastAPI itself is just a Python object. Creating an instance does not start a server or listen on any port.
 
-#Important: Why Uvicorn is Required
+#Important: Why Uvicorn is Required?
 Akash- added on 30-01-2026
 
 Uvicorn is an ASGI server that runs the FastAPI app and listens for incoming HTTP requests.
