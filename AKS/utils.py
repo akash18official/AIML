@@ -4,20 +4,21 @@ from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
 
-credential = DefaultAzureCredential()
+def _get_api_key() -> str:
+	credential = DefaultAzureCredential()
+	client = SecretClient(
+		vault_url="https://prj-key-vault.vault.azure.net/",
+		credential=credential
+	)
+	secret = client.get_secret("openai-api-key")
+	if not secret.value:
+		raise ValueError("OPENAI_API_KEY is not set")
 
-client = SecretClient(
-    vault_url="https://prj-key-vault.vault.azure.net/",
-    credential=credential
-)
-
-secret = client.get_secret("openai-api-key")
+	return secret.value
 
 
 def call_llm(text: str) -> str:
-	api_key = secret.value
-	if not api_key:
-		raise ValueError("OPENAI_API_KEY is not set")
+	api_key = _get_api_key()
 
 	base_url = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
 	model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
